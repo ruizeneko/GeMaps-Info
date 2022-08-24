@@ -1,0 +1,745 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Pitch &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/ehu.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Untitled.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUntitled.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Untitled.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Pitch
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jitter">
+   Jitter
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formant-1-2-and-3-frequency">
+   Formant 1, 2, and 3 frequency
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bandwidth-of-formant-1">
+   Bandwidth of Formant 1
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Pitch</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Pitch
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jitter">
+   Jitter
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formant-1-2-and-3-frequency">
+   Formant 1, 2, and 3 frequency
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bandwidth-of-formant-1">
+   Bandwidth of Formant 1
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">parselmouth</span> 
+<span class="kn">from</span> <span class="nn">parselmouth.praat</span> <span class="kn">import</span> <span class="n">call</span>
+<span class="kn">import</span> <span class="nn">opensmile</span>
+<span class="kn">import</span> <span class="nn">audiofile</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>First, frequency related parameters are going to be explained. Those parameters are:</p>
+<ul class="simple">
+<li><p>Pitch</p></li>
+<li><p>Jitter</p></li>
+<li><p>Formant 1, 2 and 3 frequency</p></li>
+<li><p>Bandwidth of Formant 1</p></li>
+</ul>
+<p>NOTE: All the values obtained with Parselmouth have been compared (and checked) with the Desktop version (for Unix System) of PRAAT</p>
+<section class="tex2jax_ignore mathjax_ignore" id="pitch">
+<h1>Pitch<a class="headerlink" href="#pitch" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<p>The pitch is the logarithmic fundamental frequency <span class="math notranslate nohighlight">\(F_0\)</span> (lowerst frequency of a periodic waveform, <span class="math notranslate nohighlight">\(F_3\)</span> would be <span class="math notranslate nohighlight">\(F_3 = 3 \cdot F_0\)</span>) on a semitone frequency scale starting at 27.5 Hz (que es un semitone?). Therefore, it is highly related with the <span class="math notranslate nohighlight">\(F_0\)</span> of a speech signal, which refers to the approximate frequency of the (quasi-)periodic structure of speech signal.</p>
+<p>The oscillation originates from the vocal folds, which oscillate in the airflow when appropriately tensed. The fundamental frequency is defined as the average number of oscillations per second and expressed in Hertz.</p>
+<p>Since the oscillation originates from an organic structure, it is not exactly periodic but contains significant fluctuations. In particular, amount of variation in period length and amplitude are known respectively as jitter and shimmer. Moreover, it changes constantly within the sentence and can be used for emphasis or for questions.</p>
+<p>However, the pitch and the <span class="math notranslate nohighlight">\(F_0\)</span> are not the same, because the pitch is defined as our perception of fundamental frequency. Therefore, for complex sounds like speech, it can differ from <span class="math notranslate nohighlight">\(F_0\)</span> due to overtones.</p>
+<p>In GeMaps (and therefore in PRAAT and openSMILE) is computed via sub-harmonic summation (SHS) in the spectral domain and further preprocessing is applied). Very simply, the can be dedined as the inverse of the legnth of a simple periode:
+$<span class="math notranslate nohighlight">\( F_0 = \frac{1}{T} \)</span>$</p>
+<p>Let us compute it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With Parselmouth (Python implementation of PRAAT)</span>
+<span class="c1"># We load the audio into ParselMouth</span>
+<span class="n">dir_audio</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;/home&quot;</span><span class="p">,</span> <span class="s2">&quot;enekoehu&quot;</span><span class="p">,</span> <span class="s2">&quot;Trabajo&quot;</span><span class="p">,</span> <span class="s2">&quot;HAZITEK&quot;</span><span class="p">,</span> <span class="s2">&quot;Documentos&quot;</span><span class="p">,</span> <span class="s2">&quot;Emphasis&quot;</span><span class="p">,</span> <span class="s2">&quot;sensación_enfado_1_5942331367283039919_1_46.wav&quot;</span><span class="p">)</span>
+<span class="n">sound</span> <span class="o">=</span> <span class="n">parselmouth</span><span class="o">.</span><span class="n">Sound</span><span class="p">(</span><span class="n">dir_audio</span><span class="p">)</span>
+
+<span class="n">pitch</span> <span class="o">=</span> <span class="n">sound</span><span class="o">.</span><span class="n">to_pitch</span><span class="p">(</span><span class="n">time_step</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">,</span> <span class="n">pitch_floor</span><span class="o">=</span><span class="mf">27.5</span><span class="p">,</span> <span class="n">pitch_ceiling</span><span class="o">=</span><span class="mf">600.0</span><span class="p">)</span>
+<span class="n">pitch</span><span class="o">.</span><span class="n">get_value_at_time</span><span class="p">(</span><span class="mf">9.91</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>178.91435089010068
+</pre></div>
+</div>
+</div>
+</div>
+<p>Therefore, the pitch at <span class="math notranslate nohighlight">\(t = 14s\)</span> is <span class="math notranslate nohighlight">\(167.52 Hz\)</span>. For the calculation, a time_step of 0.001s is taken, and only frequency values between 75 and 600 Hz are taken into account.</p>
+<p>For openSMILE:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">signal</span><span class="p">,</span> <span class="n">sampling_rate</span> <span class="o">=</span> <span class="n">audiofile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+    <span class="n">dir_audio</span><span class="p">,</span>
+    <span class="n">duration</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">always_2d</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">smile</span> <span class="o">=</span> <span class="n">opensmile</span><span class="o">.</span><span class="n">Smile</span><span class="p">(</span>
+    <span class="n">feature_set</span><span class="o">=</span><span class="n">opensmile</span><span class="o">.</span><span class="n">FeatureSet</span><span class="o">.</span><span class="n">GeMAPSv01b</span><span class="p">,</span>
+    <span class="n">feature_level</span><span class="o">=</span><span class="n">opensmile</span><span class="o">.</span><span class="n">FeatureLevel</span><span class="o">.</span><span class="n">LowLevelDescriptors</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">smile</span><span class="o">.</span><span class="n">process_signal</span><span class="p">(</span>
+    <span class="n">signal</span><span class="p">,</span>
+    <span class="n">sampling_rate</span>
+<span class="p">)[</span><span class="s2">&quot;F0semitoneFrom27.5Hz_sma3nz&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start                   end                   
+0 days 00:00:00         0 days 00:00:00.020000     0.000000
+0 days 00:00:00.010000  0 days 00:00:00.030000     0.000000
+0 days 00:00:00.020000  0 days 00:00:00.040000     0.000000
+0 days 00:00:00.030000  0 days 00:00:00.050000     0.000000
+0 days 00:00:00.040000  0 days 00:00:00.060000     0.000000
+                                                    ...    
+0 days 00:00:09.910000  0 days 00:00:09.930000    32.997173
+0 days 00:00:09.920000  0 days 00:00:09.940000    33.207516
+0 days 00:00:09.930000  0 days 00:00:09.950000    33.357105
+0 days 00:00:09.940000  0 days 00:00:09.960000    34.546413
+0 days 00:00:09.950000  0 days 00:00:10           34.701092
+Name: F0semitoneFrom27.5Hz_sma3nz, Length: 996, dtype: float32
+</pre></div>
+</div>
+</div>
+</div>
+<p>In openSMILE, 20 ms time steps are taken into account and, as it can be seen, the results are quite different.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="jitter">
+<h1>Jitter<a class="headerlink" href="#jitter" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<p>The jitter is the deviations in individual consecutive <span class="math notranslate nohighlight">\(F_0\)</span> period length. Therefore,
+it can be defined as a variation in the (speech) signal frequency. All natural speech contains some level of jitter,
+but measuring it is a common way to detect voice pathologies. It can be detected easier from long, sustained vowels
+and has its origin in the fact that vocal fold oscilattion is not exactlu period. In the GeMaps paper, 3 different
+Jitters are presented: absolute local jitter, average local jitter and average relative jitter.</p>
+<p>The absolute local jitter is the difference between two consecutive periods, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[ J_{pp}(n') = |T_{0}(n') - T_0(n'-1)| \]</div>
+<p>This definition yields one value for every pitch period. To obtain a single jitter value per frame for N’ local pitch perdios within one analysis frame, we compute the average jitter:</p>
+<div class="math notranslate nohighlight">
+\[ \overline{J_{pp}(n')} = \frac{1}{N' - 1}\sum_{n'=2}^{N'}J_{pp}(n') \]</div>
+<p>Lastly, to make the jitter not dependant of the pitch period length, we scale it by the avarage pitch period length, obtaining the average relative jitter:</p>
+<div class="math notranslate nohighlight">
+\[ \overline{J_{pp, rel}} = \frac{\overline{J_{pp}(n')}}{\frac{1}{N'}\sum_{n'=1}^{N'}T_0(n')} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To obtain it with Praat</span>
+<span class="n">max_pitch_f</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">min_pitch_f</span> <span class="o">=</span> <span class="mf">27.5</span>
+<span class="n">pointProcess</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">sound</span><span class="p">,</span> <span class="s2">&quot;To PointProcess (periodic, cc)&quot;</span><span class="p">,</span><span class="n">min_pitch_f</span><span class="p">,</span> <span class="n">max_pitch_f</span><span class="p">)</span>
+
+<span class="n">time_range_start</span> <span class="o">=</span> <span class="mf">9.92</span>
+<span class="n">time_range_end</span> <span class="o">=</span> <span class="mf">9.94</span> <span class="c1"># 0 if total=0</span>
+<span class="n">shortest_period</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="n">longest_period</span> <span class="o">=</span> <span class="mf">0.02</span> 
+<span class="n">maximum_period_factor</span> <span class="o">=</span> <span class="mf">1.3</span>
+
+<span class="n">localJitter</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">pointProcess</span><span class="p">,</span> <span class="s2">&quot;Get jitter (local)&quot;</span><span class="p">,</span> <span class="n">time_range_start</span><span class="p">,</span> <span class="n">time_range_end</span><span class="p">,</span> <span class="n">shortest_period</span><span class="p">,</span> <span class="n">longest_period</span><span class="p">,</span> <span class="n">maximum_period_factor</span><span class="p">)</span>
+<span class="n">localJitter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.018755528968526735
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With OpenSmile</span>
+<span class="n">smile</span><span class="o">.</span><span class="n">process_signal</span><span class="p">(</span>
+    <span class="n">signal</span><span class="p">,</span>
+    <span class="n">sampling_rate</span>
+<span class="p">)[</span><span class="s2">&quot;jitterLocal_sma3nz&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start                   end                   
+0 days 00:00:00         0 days 00:00:00.020000    0.000000
+0 days 00:00:00.010000  0 days 00:00:00.030000    0.000000
+0 days 00:00:00.020000  0 days 00:00:00.040000    0.000000
+0 days 00:00:00.030000  0 days 00:00:00.050000    0.000000
+0 days 00:00:00.040000  0 days 00:00:00.060000    0.000000
+                                                    ...   
+0 days 00:00:09.910000  0 days 00:00:09.930000    0.011538
+0 days 00:00:09.920000  0 days 00:00:09.940000    0.014664
+0 days 00:00:09.930000  0 days 00:00:09.950000    0.014700
+0 days 00:00:09.940000  0 days 00:00:09.960000    0.035310
+0 days 00:00:09.950000  0 days 00:00:10           0.044278
+Name: jitterLocal_sma3nz, Length: 996, dtype: float32
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="formant-1-2-and-3-frequency">
+<h1>Formant 1, 2, and 3 frequency<a class="headerlink" href="#formant-1-2-and-3-frequency" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<p>Centre frequency of the first, second and third formants.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtain them with PRAAT</span>
+
+<span class="n">formants</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">sound</span><span class="p">,</span> <span class="s2">&quot;To Formant (burg)&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5500</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="c1">#formants= call(sound, &quot;To Formant (burg)&quot;, TIME_STEP, NUMBER_OF_FORMANTS, MAXIMUM_FORMANT ( 5500 = ADULT FEMALE), WINDOWS_LENGTH, PRE_EMPHASIS_FROM)</span>
+
+<span class="n">f1</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">formants</span><span class="p">,</span> <span class="s2">&quot;Get value at time&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">9.91</span><span class="p">,</span> <span class="s1">&#39;Hertz&#39;</span><span class="p">,</span> <span class="s1">&#39;Linear&#39;</span><span class="p">)</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">formants</span><span class="p">,</span> <span class="s2">&quot;Get value at time&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">9.91</span><span class="p">,</span> <span class="s1">&#39;Hertz&#39;</span><span class="p">,</span> <span class="s1">&#39;Linear&#39;</span><span class="p">)</span>
+<span class="n">f3</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">formants</span><span class="p">,</span> <span class="s2">&quot;Get value at time&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">9.91</span><span class="p">,</span> <span class="s1">&#39;Hertz&#39;</span><span class="p">,</span> <span class="s1">&#39;Linear&#39;</span><span class="p">)</span>
+<span class="c1">#fx= call(formants, &quot;XXXXXXXXXXXXXXXXX&quot;, formant_number, time(s), unit(Hertz vs. bark), &quot;interpolation&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>349.1746510494882
+1918.7210151099382
+2884.104320142441
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The same with OpenSmile</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">smile</span><span class="o">.</span><span class="n">process_signal</span><span class="p">(</span>
+    <span class="n">signal</span><span class="p">,</span>
+    <span class="n">sampling_rate</span>
+<span class="p">)[</span><span class="s2">&quot;F1frequency_sma3nz&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">smile</span><span class="o">.</span><span class="n">process_signal</span><span class="p">(</span>
+    <span class="n">signal</span><span class="p">,</span>
+    <span class="n">sampling_rate</span>
+<span class="p">)[</span><span class="s2">&quot;F2frequency_sma3nz&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">smile</span><span class="o">.</span><span class="n">process_signal</span><span class="p">(</span>
+    <span class="n">signal</span><span class="p">,</span>
+    <span class="n">sampling_rate</span>
+<span class="p">)[</span><span class="s2">&quot;F3frequency_sma3nz&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start                   end                   
+0 days 00:00:00         0 days 00:00:00.020000      0.000000
+0 days 00:00:00.010000  0 days 00:00:00.030000      0.000000
+0 days 00:00:00.020000  0 days 00:00:00.040000      0.000000
+0 days 00:00:00.030000  0 days 00:00:00.050000      0.000000
+0 days 00:00:00.040000  0 days 00:00:00.060000      0.000000
+                                                     ...    
+0 days 00:00:09.910000  0 days 00:00:09.930000    350.368500
+0 days 00:00:09.920000  0 days 00:00:09.940000    345.129486
+0 days 00:00:09.930000  0 days 00:00:09.950000    337.429810
+0 days 00:00:09.940000  0 days 00:00:09.960000    362.909180
+0 days 00:00:09.950000  0 days 00:00:10           370.095856
+Name: F1frequency_sma3nz, Length: 996, dtype: float32
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start                   end                   
+0 days 00:00:00         0 days 00:00:00.020000       0.000000
+0 days 00:00:00.010000  0 days 00:00:00.030000       0.000000
+0 days 00:00:00.020000  0 days 00:00:00.040000       0.000000
+0 days 00:00:00.030000  0 days 00:00:00.050000       0.000000
+0 days 00:00:00.040000  0 days 00:00:00.060000       0.000000
+                                                     ...     
+0 days 00:00:09.910000  0 days 00:00:09.930000    1495.355103
+0 days 00:00:09.920000  0 days 00:00:09.940000    1500.416016
+0 days 00:00:09.930000  0 days 00:00:09.950000    1510.627930
+0 days 00:00:09.940000  0 days 00:00:09.960000    1607.413452
+0 days 00:00:09.950000  0 days 00:00:10           1697.961548
+Name: F2frequency_sma3nz, Length: 996, dtype: float32
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start                   end                   
+0 days 00:00:00         0 days 00:00:00.020000       0.000000
+0 days 00:00:00.010000  0 days 00:00:00.030000       0.000000
+0 days 00:00:00.020000  0 days 00:00:00.040000       0.000000
+0 days 00:00:00.030000  0 days 00:00:00.050000       0.000000
+0 days 00:00:00.040000  0 days 00:00:00.060000       0.000000
+                                                     ...     
+0 days 00:00:09.910000  0 days 00:00:09.930000    2567.866211
+0 days 00:00:09.920000  0 days 00:00:09.940000    2554.605469
+0 days 00:00:09.930000  0 days 00:00:09.950000    2556.752197
+0 days 00:00:09.940000  0 days 00:00:09.960000    2252.661865
+0 days 00:00:09.950000  0 days 00:00:10           2228.766602
+Name: F3frequency_sma3nz, Length: 996, dtype: float32
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bandwidth-of-formant-1">
+<h1>Bandwidth of Formant 1<a class="headerlink" href="#bandwidth-of-formant-1" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<p>The bandwidth of the first formant</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtain it with PRAAT:</span>
+<span class="n">f1_bandwidth</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">formants</span><span class="p">,</span> <span class="s2">&quot;Get bandwidth at time&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">9.91</span><span class="p">,</span> <span class="s1">&#39;Hertz&#39;</span><span class="p">,</span> <span class="s1">&#39;Linear&#39;</span><span class="p">)</span>
+<span class="n">f1_bandwidth</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>311.0145332999822
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The same with OpenSmile</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">smile</span><span class="o">.</span><span class="n">process_signal</span><span class="p">(</span>
+    <span class="n">signal</span><span class="p">,</span>
+    <span class="n">sampling_rate</span>
+<span class="p">)[</span><span class="s2">&quot;F1bandwidth_sma3nz&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start                   end                   
+0 days 00:00:00         0 days 00:00:00.020000       0.000000
+0 days 00:00:00.010000  0 days 00:00:00.030000       0.000000
+0 days 00:00:00.020000  0 days 00:00:00.040000       0.000000
+0 days 00:00:00.030000  0 days 00:00:00.050000       0.000000
+0 days 00:00:00.040000  0 days 00:00:00.060000       0.000000
+                                                     ...     
+0 days 00:00:09.910000  0 days 00:00:09.930000    1025.568970
+0 days 00:00:09.920000  0 days 00:00:09.940000    1062.942017
+0 days 00:00:09.930000  0 days 00:00:09.950000    1111.029785
+0 days 00:00:09.940000  0 days 00:00:09.960000    1193.927246
+0 days 00:00:09.950000  0 days 00:00:10           1129.574463
+Name: F1bandwidth_sma3nz, Length: 996, dtype: float32
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "hazitek"
+        },
+        kernelOptions: {
+            kernelName: "hazitek",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'hazitek'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By M. Ines Torres y Eneko Ruiz<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
