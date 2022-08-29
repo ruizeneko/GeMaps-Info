@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Energy/Amplitude related parameters &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Spectral parameters" href="Spec.html" />
+    <link rel="prev" title="Frequency related parameters" href="freq.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/ehu.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="freq.html">
+   Frequency related parameters
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Energy/Amplitude related parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Spec.html">
+   Spectral parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ExtendedParams.html">
+   Extended Set - Spectral parameters
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Amp.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAmp.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Amp.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shimmer">
+   Shimmer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loudness">
+   Loudness
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hnr">
+   HNR
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Energy/Amplitude related parameters</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shimmer">
+   Shimmer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loudness">
+   Loudness
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hnr">
+   HNR
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="energy-amplitude-related-parameters">
+<h1>Energy/Amplitude related parameters<a class="headerlink" href="#energy-amplitude-related-parameters" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<p>Now, Energy/Amplitude related parameters are going to be explained. These parameters are:</p>
+<ul class="simple">
+<li><p>Shimmer</p></li>
+<li><p>Loudness</p></li>
+<li><p>HNR</p></li>
+</ul>
+<p>Let us start with the shimmer</p>
+<section id="shimmer">
+<h2>Shimmer<a class="headerlink" href="#shimmer" title="Permalink to this headline">#</a></h2>
+<hr class="docutils" />
+<p>The shimmer, closely related to the jitter, is the difference of the peak amplitudes of
+consecutive F0 periods. The relationship can be seen more clear in the next Figure:
+<img src="Jitter-Shimmer.png" alt="drawing" width="500"/></p>
+<p>It is, in GeMaps, computed as avarage of the relative peak amplitude differences (in dB).
+Because the phase of the pitch period segments found by the waveform matching algorithm is random, the maximum and minimum amplitude <span class="math notranslate nohighlight">\((x_{max,n′}\)</span> and <span class="math notranslate nohighlight">\(x_{min,n′}\)</span>) within each pitch period are identified. By analogy with jitter, there are 3 differents Shimmers that can be measured.</p>
+<p>Let us start with local period to period shimmer:</p>
+<p>Local period to period shimmer is defined as:
+$<span class="math notranslate nohighlight">\( S_{pp}(n') = |A(n') - A(n' - 1) | \)</span>$</p>
+<p>Here, the peak to peak amplitude difference is defined by: <span class="math notranslate nohighlight">\(A(n') = x_{max,n′} - x_{min,n′}\)</span></p>
+<p>As for jitter, the period to period shimmer values are averaged over each 60 ms frame in order to synchronise the rate of this descriptor with the constant rate of all other short-time descriptors. The averaged, relative shimmer is referred to as Spp,rel. It is expressed as amplitude ratios, i. e., the per period amplitude values are normalised to the per frame average peak amplitude:</p>
+<div class="math notranslate nohighlight">
+\[ \overline{S_{pp, rel}} =  \frac{\frac{1}{N'-1}\sum_{n'=2}^{N'}S_{pp}(n')}{\frac{1}{N}\sum_{n'=1}^{N'}A(n')}\]</div>
+<p>Let us calculate it with PRAAT:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">parselmouth</span> 
+<span class="kn">from</span> <span class="nn">parselmouth.praat</span> <span class="kn">import</span> <span class="n">call</span>
+<span class="kn">import</span> <span class="nn">opensmile</span>
+<span class="kn">import</span> <span class="nn">audiofile</span>
+
+<span class="c1"># We load the audio into ParselMouth</span>
+<span class="n">dir_audio</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;/home&quot;</span><span class="p">,</span> <span class="s2">&quot;enekoehu&quot;</span><span class="p">,</span> <span class="s2">&quot;Trabajo&quot;</span><span class="p">,</span> <span class="s2">&quot;HAZITEK&quot;</span><span class="p">,</span> <span class="s2">&quot;Documentos&quot;</span><span class="p">,</span> <span class="s2">&quot;Emphasis&quot;</span><span class="p">,</span> <span class="s2">&quot;sensación_enfado_1_5942331367283039919_1_46.wav&quot;</span><span class="p">)</span>
+<span class="n">sound</span> <span class="o">=</span> <span class="n">parselmouth</span><span class="o">.</span><span class="n">Sound</span><span class="p">(</span><span class="n">dir_audio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shimmer calculated in PRAAT</span>
+<span class="n">min_pitch_f</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="n">max_pitch_f</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">pointProcess</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">sound</span><span class="p">,</span> <span class="s2">&quot;To PointProcess (periodic, cc)&quot;</span><span class="p">,</span> <span class="n">min_pitch_f</span><span class="p">,</span> <span class="n">max_pitch_f</span><span class="p">)</span>
+
+<span class="n">time_range_start</span> <span class="o">=</span> <span class="mf">9.92</span>
+<span class="n">time_range_end</span> <span class="o">=</span> <span class="mf">9.94</span> <span class="c1"># 0 if total=0</span>
+
+<span class="n">shortest_period</span> <span class="o">=</span> <span class="mf">0.025</span>
+<span class="n">longest_period</span> <span class="o">=</span> <span class="mf">0.025</span>
+<span class="n">maximum_period_factor</span> <span class="o">=</span> <span class="mf">1.8</span>
+<span class="n">maximum_amplitude_factor</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+<span class="n">localShimmer</span> <span class="o">=</span>  <span class="n">call</span><span class="p">([</span><span class="n">sound</span><span class="p">,</span> <span class="n">pointProcess</span><span class="p">],</span> <span class="s2">&quot;Get shimmer (local)&quot;</span><span class="p">,</span> <span class="n">time_range_start</span><span class="p">,</span> <span class="n">time_range_end</span><span class="p">,</span> <span class="n">shortest_period</span><span class="p">,</span> <span class="n">longest_period</span><span class="p">,</span> <span class="n">maximum_period_factor</span><span class="p">,</span> <span class="n">maximum_amplitude_factor</span><span class="p">)</span>
+<span class="n">localShimmer</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.28915390699510773
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># OpenSMILE</span>
+<span class="n">signal</span><span class="p">,</span> <span class="n">sampling_rate</span> <span class="o">=</span> <span class="n">audiofile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>
+    <span class="n">dir_audio</span><span class="p">,</span>
+    <span class="n">duration</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">always_2d</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">smile</span> <span class="o">=</span> <span class="n">opensmile</span><span class="o">.</span><span class="n">Smile</span><span class="p">(</span>
+    <span class="n">feature_set</span><span class="o">=</span><span class="n">opensmile</span><span class="o">.</span><span class="n">FeatureSet</span><span class="o">.</span><span class="n">GeMAPSv01b</span><span class="p">,</span>
+    <span class="n">feature_level</span><span class="o">=</span><span class="n">opensmile</span><span class="o">.</span><span class="n">FeatureLevel</span><span class="o">.</span><span class="n">LowLevelDescriptors</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">smile</span><span class="o">.</span><span class="n">process_signal</span><span class="p">(</span>
+    <span class="n">signal</span><span class="p">,</span>
+    <span class="n">sampling_rate</span>
+<span class="p">)[</span><span class="s2">&quot;shimmerLocaldB_sma3nz&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start                   end                   
+0 days 00:00:00         0 days 00:00:00.020000    0.000000
+0 days 00:00:00.010000  0 days 00:00:00.030000    0.000000
+0 days 00:00:00.020000  0 days 00:00:00.040000    0.000000
+0 days 00:00:00.030000  0 days 00:00:00.050000    0.000000
+0 days 00:00:00.040000  0 days 00:00:00.060000    0.000000
+                                                    ...   
+0 days 00:00:09.910000  0 days 00:00:09.930000    0.620124
+0 days 00:00:09.920000  0 days 00:00:09.940000    0.528167
+0 days 00:00:09.930000  0 days 00:00:09.950000    0.704648
+0 days 00:00:09.940000  0 days 00:00:09.960000    0.430320
+0 days 00:00:09.950000  0 days 00:00:10           0.464016
+Name: shimmerLocaldB_sma3nz, Length: 996, dtype: float32
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="loudness">
+<h2>Loudness<a class="headerlink" href="#loudness" title="Permalink to this headline">#</a></h2>
+<hr class="docutils" />
+<p>Loudness, instead of signal energy/amplitude, is used to accouont for human’s non-linear perception of noise (GeMaps definition: estimate of perceived signal intensity from an auditory spectrum). To represent it, an auditory spectrum as is applied in the Perceptual Linear Prediction (PLP) technique is adopted. Loudness is computed as the sum over all bands of the auditory spectrum.</p>
+<p>For PRAAT:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loudness for PRAAT</span>
+<span class="n">time_step</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">frecuency_resolution_bark</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">windows_length</span> <span class="o">=</span> <span class="mf">0.03</span>
+<span class="n">forward_masking_time</span> <span class="o">=</span> <span class="mf">0.03</span>
+
+<span class="n">cochleagram</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">sound</span><span class="p">,</span> <span class="s2">&quot;To Cochleagram&quot;</span><span class="p">,</span> <span class="n">time_step</span><span class="p">,</span> <span class="n">frecuency_resolution_bark</span> <span class="p">,</span> <span class="n">windows_length</span> <span class="p">,</span> <span class="n">forward_masking_time</span><span class="p">)</span>
+
+<span class="n">time</span> <span class="o">=</span> <span class="mf">9.91</span>
+<span class="n">excitation</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">cochleagram</span><span class="p">,</span> <span class="s2">&quot;To Excitation (slice)&quot;</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+<span class="n">loudness</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">excitation</span><span class="p">,</span> <span class="s2">&quot;Get loudness&quot;</span><span class="p">)</span>
+<span class="n">loudness</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.067655425759645
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loudness for OpenSmile</span>
+<span class="n">smile</span><span class="o">.</span><span class="n">process_signal</span><span class="p">(</span>
+    <span class="n">signal</span><span class="p">,</span>
+    <span class="n">sampling_rate</span>
+<span class="p">)[</span><span class="s2">&quot;Loudness_sma3&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start                   end                   
+0 days 00:00:00         0 days 00:00:00.020000    0.001017
+0 days 00:00:00.010000  0 days 00:00:00.030000    0.001017
+0 days 00:00:00.020000  0 days 00:00:00.040000    0.001017
+0 days 00:00:00.030000  0 days 00:00:00.050000    0.001017
+0 days 00:00:00.040000  0 days 00:00:00.060000    0.001017
+                                                    ...   
+0 days 00:00:09.910000  0 days 00:00:09.930000    0.191413
+0 days 00:00:09.920000  0 days 00:00:09.940000    0.181684
+0 days 00:00:09.930000  0 days 00:00:09.950000    0.193715
+0 days 00:00:09.940000  0 days 00:00:09.960000    0.227966
+0 days 00:00:09.950000  0 days 00:00:10           0.265280
+Name: Loudness_sma3, Length: 996, dtype: float32
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hnr">
+<h2>HNR<a class="headerlink" href="#hnr" title="Permalink to this headline">#</a></h2>
+<hr class="docutils" />
+<p>HNR or Harmonics-to-Noise Ratio is the relation of energy in harmonic component to energy in noise-like component.
+It is defined as:</p>
+<div class="math notranslate nohighlight">
+\[ HNR_{acf, log} = 10 \log_{10} \left( \frac{ACF_{\tau_0}}{ACF_0 - ACF_{\tau_0}} \right) dB \]</div>
+<p>In the previous expression, <span class="math notranslate nohighlight">\(ACF_{\tau_0}\)</span> is the amplitude of the autocorrelation peak at the fundamental period and <span class="math notranslate nohighlight">\(ACF_0\)</span> is the 0-th ACF (autocorrelation function), equivalent to the quadratic frame energy. The HNR is floored to -100dB to avoid highly negative and varying values for low-energy noise.</p>
+<p>To calculate it in PRAAT:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HNR</span>
+<span class="n">time_step</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="n">minimum_pitch</span> <span class="o">=</span> <span class="mf">30.0</span>
+<span class="n">silence_threshold</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">periods_per_window</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="n">harmonicity</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">sound</span><span class="p">,</span> <span class="s2">&quot;To Harmonicity (cc)&quot;</span><span class="p">,</span> <span class="n">time_step</span> <span class="p">,</span> <span class="n">minimum_pitch</span><span class="p">,</span> <span class="n">silence_threshold</span><span class="p">,</span> <span class="n">periods_per_window</span><span class="p">)</span>
+
+<span class="n">time_range_start</span> <span class="o">=</span> <span class="mf">9.92</span>
+<span class="n">time_range_end</span> <span class="o">=</span> <span class="mf">9.94</span>
+
+<span class="n">hnr</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">harmonicity</span><span class="p">,</span> <span class="s2">&quot;Get mean&quot;</span><span class="p">,</span> <span class="n">time_range_start</span><span class="p">,</span> <span class="n">time_range_end</span><span class="p">)</span>
+<span class="n">hnr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nan
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HNR for OpenSmile</span>
+<span class="n">smile</span><span class="o">.</span><span class="n">process_signal</span><span class="p">(</span>
+    <span class="n">signal</span><span class="p">,</span>
+    <span class="n">sampling_rate</span>
+<span class="p">)[</span><span class="s2">&quot;HNRdBACF_sma3nz&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>start                   end                   
+0 days 00:00:00         0 days 00:00:00.020000    0.000000
+0 days 00:00:00.010000  0 days 00:00:00.030000    0.000000
+0 days 00:00:00.020000  0 days 00:00:00.040000    0.000000
+0 days 00:00:00.030000  0 days 00:00:00.050000    0.000000
+0 days 00:00:00.040000  0 days 00:00:00.060000    0.000000
+                                                    ...   
+0 days 00:00:09.910000  0 days 00:00:09.930000    7.167179
+0 days 00:00:09.920000  0 days 00:00:09.940000    5.740583
+0 days 00:00:09.930000  0 days 00:00:09.950000    4.979844
+0 days 00:00:09.940000  0 days 00:00:09.960000    6.221863
+0 days 00:00:09.950000  0 days 00:00:10           6.387264
+Name: HNRdBACF_sma3nz, Length: 996, dtype: float32
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "hazitek"
+        },
+        kernelOptions: {
+            kernelName: "hazitek",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'hazitek'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="freq.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Frequency related parameters</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Spec.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Spectral parameters</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By M. Ines Torres y Eneko Ruiz<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,15 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-import os
-import parselmouth 
-from parselmouth.praat import call
-import opensmile
-import audiofile
-
+# Frequency related parameters
+# =============
+# ****************
 
 # First, frequency related parameters are going to be explained. Those parameters are:
 # * Pitch
@@ -20,7 +14,7 @@ import audiofile
 # NOTE: All the values obtained with Parselmouth have been compared (and checked) with the Desktop version (for Unix System) of PRAAT
 
 # Pitch
-# =============
+# -------------
 # ****************
 # The pitch is the logarithmic fundamental frequency $F_0$ (lowerst frequency of a periodic waveform, $F_3$ would be $F_3 = 3 \cdot F_0$) on a semitone frequency scale starting at 27.5 Hz (que es un semitone?). Therefore, it is highly related with the $F_0$ of a speech signal, which refers to the approximate frequency of the (quasi-)periodic structure of speech signal. 
 # 
@@ -34,6 +28,16 @@ import audiofile
 # $$ F_0 = \frac{1}{T} $$
 # 
 # Let us compute it:
+
+# In[1]:
+
+
+import os
+import parselmouth 
+from parselmouth.praat import call
+import opensmile
+import audiofile
+
 
 # In[2]:
 
@@ -72,12 +76,12 @@ smile.process_signal(
 # In openSMILE, 20 ms time steps are taken into account and, as it can be seen, the results are quite different.
 
 # Jitter
-# =============
+# -------------
 # ****************
 # The jitter is the deviations in individual consecutive $F_0$ period length. Therefore, 
 # it can be defined as a variation in the (speech) signal frequency. All natural speech contains some level of jitter, 
 # but measuring it is a common way to detect voice pathologies. It can be detected easier from long, sustained vowels
-# and has its origin in the fact that vocal fold oscilattion is not exactlu period. In the GeMaps paper, 3 different
+# and has its origin in the fact that vocal fold oscilattion is not exactly period. In the GeMaps paper, 3 different
 # Jitters are presented: absolute local jitter, average local jitter and average relative jitter. 
 
 # The absolute local jitter is the difference between two consecutive periods, i.e., 
@@ -121,7 +125,7 @@ smile.process_signal(
 
 
 # Formant 1, 2, and 3 frequency
-# =============
+# -------------
 # ****************
 # Centre frequency of the first, second and third formants. 
 
@@ -163,7 +167,7 @@ print(smile.process_signal(
 
 
 # Bandwidth of Formant 1
-# =============
+# -------------
 # ****************
 # The bandwidth of the first formant
 
@@ -183,10 +187,4 @@ print(smile.process_signal(
     signal,
     sampling_rate
 )["F1bandwidth_sma3nz"])
-
-
-# In[ ]:
-
-
-
 

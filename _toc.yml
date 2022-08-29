@@ -5,3 +5,6 @@ format: jb-book
 root: intro
 chapters:
 - file: freq
+- file: Amp
+- file: Spec
+- file: ExtendedParams

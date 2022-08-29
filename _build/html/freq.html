@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Pitch &#8212; My sample book</title>
+    <title>Frequency related parameters &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Energy/Amplitude related parameters" href="Amp.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -117,7 +118,22 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Pitch
+   Frequency related parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Amp.html">
+   Energy/Amplitude related parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Spec.html">
+   Spectral parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ExtendedParams.html">
+   Extended Set - Spectral parameters
   </a>
  </li>
 </ul>
@@ -326,22 +342,22 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pitch">
    Pitch
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jitter">
    Jitter
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#formant-1-2-and-3-frequency">
    Formant 1, 2, and 3 frequency
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bandwidth-of-formant-1">
    Bandwidth of Formant 1
   </a>
@@ -355,7 +371,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Pitch</h1>
+                <h1>Frequency related parameters</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -365,22 +381,22 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pitch">
    Pitch
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jitter">
    Jitter
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#formant-1-2-and-3-frequency">
    Formant 1, 2, and 3 frequency
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bandwidth-of-formant-1">
    Bandwidth of Formant 1
   </a>
@@ -395,7 +411,28 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="frequency-related-parameters">
+<h1>Frequency related parameters<a class="headerlink" href="#frequency-related-parameters" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<p>First, frequency related parameters are going to be explained. Those parameters are:</p>
+<ul class="simple">
+<li><p>Pitch</p></li>
+<li><p>Jitter</p></li>
+<li><p>Formant 1, 2 and 3 frequency</p></li>
+<li><p>Bandwidth of Formant 1</p></li>
+</ul>
+<p>NOTE: All the values obtained with Parselmouth have been compared (and checked) with the Desktop version (for Unix System) of PRAAT</p>
+<section id="pitch">
+<h2>Pitch<a class="headerlink" href="#pitch" title="Permalink to this headline">#</a></h2>
+<hr class="docutils" />
+<p>The pitch is the logarithmic fundamental frequency <span class="math notranslate nohighlight">\(F_0\)</span> (lowerst frequency of a periodic waveform, <span class="math notranslate nohighlight">\(F_3\)</span> would be <span class="math notranslate nohighlight">\(F_3 = 3 \cdot F_0\)</span>) on a semitone frequency scale starting at 27.5 Hz (que es un semitone?). Therefore, it is highly related with the <span class="math notranslate nohighlight">\(F_0\)</span> of a speech signal, which refers to the approximate frequency of the (quasi-)periodic structure of speech signal.</p>
+<p>The oscillation originates from the vocal folds, which oscillate in the airflow when appropriately tensed. The fundamental frequency is defined as the average number of oscillations per second and expressed in Hertz.</p>
+<p>Since the oscillation originates from an organic structure, it is not exactly periodic but contains significant fluctuations. In particular, amount of variation in period length and amplitude are known respectively as jitter and shimmer. Moreover, it changes constantly within the sentence and can be used for emphasis or for questions.</p>
+<p>However, the pitch and the <span class="math notranslate nohighlight">\(F_0\)</span> are not the same, because the pitch is defined as our perception of fundamental frequency. Therefore, for complex sounds like speech, it can differ from <span class="math notranslate nohighlight">\(F_0\)</span> due to overtones.</p>
+<p>In GeMaps (and therefore in PRAAT and openSMILE) is computed via sub-harmonic summation (SHS) in the spectral domain and further preprocessing is applied). Very simply, the can be dedined as the inverse of the legnth of a simple periode:
+$<span class="math notranslate nohighlight">\( F_0 = \frac{1}{T} \)</span>$</p>
+<p>Let us compute it:</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">parselmouth</span> 
@@ -406,24 +443,6 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>First, frequency related parameters are going to be explained. Those parameters are:</p>
-<ul class="simple">
-<li><p>Pitch</p></li>
-<li><p>Jitter</p></li>
-<li><p>Formant 1, 2 and 3 frequency</p></li>
-<li><p>Bandwidth of Formant 1</p></li>
-</ul>
-<p>NOTE: All the values obtained with Parselmouth have been compared (and checked) with the Desktop version (for Unix System) of PRAAT</p>
-<section class="tex2jax_ignore mathjax_ignore" id="pitch">
-<h1>Pitch<a class="headerlink" href="#pitch" title="Permalink to this headline">#</a></h1>
-<hr class="docutils" />
-<p>The pitch is the logarithmic fundamental frequency <span class="math notranslate nohighlight">\(F_0\)</span> (lowerst frequency of a periodic waveform, <span class="math notranslate nohighlight">\(F_3\)</span> would be <span class="math notranslate nohighlight">\(F_3 = 3 \cdot F_0\)</span>) on a semitone frequency scale starting at 27.5 Hz (que es un semitone?). Therefore, it is highly related with the <span class="math notranslate nohighlight">\(F_0\)</span> of a speech signal, which refers to the approximate frequency of the (quasi-)periodic structure of speech signal.</p>
-<p>The oscillation originates from the vocal folds, which oscillate in the airflow when appropriately tensed. The fundamental frequency is defined as the average number of oscillations per second and expressed in Hertz.</p>
-<p>Since the oscillation originates from an organic structure, it is not exactly periodic but contains significant fluctuations. In particular, amount of variation in period length and amplitude are known respectively as jitter and shimmer. Moreover, it changes constantly within the sentence and can be used for emphasis or for questions.</p>
-<p>However, the pitch and the <span class="math notranslate nohighlight">\(F_0\)</span> are not the same, because the pitch is defined as our perception of fundamental frequency. Therefore, for complex sounds like speech, it can differ from <span class="math notranslate nohighlight">\(F_0\)</span> due to overtones.</p>
-<p>In GeMaps (and therefore in PRAAT and openSMILE) is computed via sub-harmonic summation (SHS) in the spectral domain and further preprocessing is applied). Very simply, the can be dedined as the inverse of the legnth of a simple periode:
-$<span class="math notranslate nohighlight">\( F_0 = \frac{1}{T} \)</span>$</p>
-<p>Let us compute it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With Parselmouth (Python implementation of PRAAT)</span>
@@ -482,13 +501,13 @@ Name: F0semitoneFrom27.5Hz_sma3nz, Length: 996, dtype: float32
 </div>
 <p>In openSMILE, 20 ms time steps are taken into account and, as it can be seen, the results are quite different.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="jitter">
-<h1>Jitter<a class="headerlink" href="#jitter" title="Permalink to this headline">#</a></h1>
+<section id="jitter">
+<h2>Jitter<a class="headerlink" href="#jitter" title="Permalink to this headline">#</a></h2>
 <hr class="docutils" />
 <p>The jitter is the deviations in individual consecutive <span class="math notranslate nohighlight">\(F_0\)</span> period length. Therefore,
 it can be defined as a variation in the (speech) signal frequency. All natural speech contains some level of jitter,
 but measuring it is a common way to detect voice pathologies. It can be detected easier from long, sustained vowels
-and has its origin in the fact that vocal fold oscilattion is not exactlu period. In the GeMaps paper, 3 different
+and has its origin in the fact that vocal fold oscilattion is not exactly period. In the GeMaps paper, 3 different
 Jitters are presented: absolute local jitter, average local jitter and average relative jitter.</p>
 <p>The absolute local jitter is the difference between two consecutive periods, i.e.,</p>
 <div class="math notranslate nohighlight">
@@ -552,8 +571,8 @@ Name: jitterLocal_sma3nz, Length: 996, dtype: float32
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="formant-1-2-and-3-frequency">
-<h1>Formant 1, 2, and 3 frequency<a class="headerlink" href="#formant-1-2-and-3-frequency" title="Permalink to this headline">#</a></h1>
+<section id="formant-1-2-and-3-frequency">
+<h2>Formant 1, 2, and 3 frequency<a class="headerlink" href="#formant-1-2-and-3-frequency" title="Permalink to this headline">#</a></h2>
 <hr class="docutils" />
 <p>Centre frequency of the first, second and third formants.</p>
 <div class="cell docutils container">
@@ -650,8 +669,8 @@ Name: F3frequency_sma3nz, Length: 996, dtype: float32
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="bandwidth-of-formant-1">
-<h1>Bandwidth of Formant 1<a class="headerlink" href="#bandwidth-of-formant-1" title="Permalink to this headline">#</a></h1>
+<section id="bandwidth-of-formant-1">
+<h2>Bandwidth of Formant 1<a class="headerlink" href="#bandwidth-of-formant-1" title="Permalink to this headline">#</a></h2>
 <hr class="docutils" />
 <p>The bandwidth of the first formant</p>
 <div class="cell docutils container">
@@ -697,6 +716,7 @@ Name: F1bandwidth_sma3nz, Length: 996, dtype: float32
 </div>
 </div>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -731,6 +751,13 @@ Name: F1bandwidth_sma3nz, Length: 996, dtype: float32
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Welcome to your Jupyter Book</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="Amp.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Energy/Amplitude related parameters</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
